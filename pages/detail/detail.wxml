@@ -1,0 +1,46 @@
+<view class="detail">
+  <view class="amount" wx:if="{{payInfo.orderType=='refund'}}">
+    <text class="unit">￥</text>{{payInfo.refundAmt}}
+    <text class="state">{{state}}</text>
+  </view>
+  <view class="amount" wx:if="{{payInfo.orderType=='trade'}}">
+    <text class="unit">￥</text>{{payInfo.orderAmt}}
+    <text class="state">{{state}}</text>
+  </view>
+  <view class="data">交易时间：{{payInfo.finishTime}}</view>
+  <view class="data">交易单号：{{payInfo.mchOrderId}}</view>
+</view>
+<button class="action" size="default" bindtap="openModal" wx:if="{{showButton}}">发起退款</button>
+
+<!-- <view class="modal" hidden="{{modalHide}}">
+  <form class="payPassword" bindsubmit="onSubmit">
+    <view class="close-icon" bindtap="closeModal">
+      <site-icon icon="shanchu1" color="#d8d8d8" />
+    </view>
+    <view class="tit">请输入密码</view>
+    <view class="tips">
+      提示：密码确认后所收款项将原路退回至对方账户中
+    </view>
+    <input type="number" password maxlength="6" name="payPassword" />
+    <button class="submit-btn default" size="default" formType="submit">确认</button>
+  </form>
+</view> -->
+
+<view class="modal" catchtap="closeModal" hidden="{{modalHide}}">
+  <form class="payPassword" bindsubmit="onSubmit" catchtap="bubble">
+    <view class="close-icon" catchtap="closeModal">
+      <site-icon icon="shanchu1" color="#d8d8d8" />
+    </view>
+    <view class="tit">请输入密码</view>
+    <view class="tips">
+      提示：密码确认后所收款项将原路退回至对方账户中
+    </view>
+    <view class="pas-input">
+      <view>
+        <text wx:for="{{passwordArr}}" wx:key="index">{{item}}</text>
+      </view>
+      <input type="number" bindinput="pasInput" value="{{pasInputVal}}" password maxlength="6" name="payPassword" />
+    </view>
+    <button class="submit-btn default" size="default" formType="submit">确认</button>
+  </form>
+</view>

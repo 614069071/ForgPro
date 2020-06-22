@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "site-icon": "/components/siteicon/siteicon",
+    "countdown": "/components/countdown/countdown"
+  }
+}

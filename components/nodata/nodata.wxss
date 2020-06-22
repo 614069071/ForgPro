@@ -1,0 +1,17 @@
+.nodate {
+  width: 100%;
+  line-height: 1.6em;
+  color: #999;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 340rpx;
+  /* height: 300rpx;
+  padding-top: 60rpx; */
+}
+
+.nodate .icon-nodata {
+  display: block;
+  font-size: 150rpx;
+  color: #90d6f6;
+  line-height: 1.6em;
+}

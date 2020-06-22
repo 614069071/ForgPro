@@ -1,0 +1,85 @@
+page {
+  color: #fff;
+}
+
+.inner {
+  background-color: #05b357;
+  padding-bottom: 250rpx;
+  position: relative;
+}
+
+.inner-seconds {
+  position: absolute;
+  top: 50rpx;
+  left: 30rpx;
+}
+
+.inner::after {
+  width: 120%;
+  height: 60rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20rpx;
+  z-index: -1;
+  content: '';
+  border-radius: 0 0 50% 50%;
+  background-color: #05b357;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner .logo {
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 150rpx;
+}
+
+.title .tit {
+  font-size: 60rpx;
+  color: #fff;
+}
+
+.title .des {
+  display: flex;
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 10rpx;
+  justify-content: space-between;
+  margin-top: 8rpx;
+}
+
+.inner .amount {
+  width: 100%;
+  color: #000;
+  padding: 0 40rpx;
+  font-size: 36rpx;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+}
+
+.amount view {
+  background-color: #fff;
+  padding: 30rpx 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount view text {
+  color: #333;
+}
+
+.face-pay-btn {
+  padding: 0 40rpx;
+  margin-top: 60rpx;
+}
+
+.face-pay-btn button {
+  height: 90rpx;
+  line-height: 90rpx;
+}

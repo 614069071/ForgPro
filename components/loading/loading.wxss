@@ -1,0 +1,10 @@
+.loading-wrap {
+  width: 100%;
+  height: 60rpx;
+  padding-top: 20rpx;
+}
+
+.loading-wrap .loading-img{
+  width: 100%;
+  height: 100%;
+}

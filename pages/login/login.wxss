@@ -1,0 +1,113 @@
+.account-login-page {
+  padding-top: 110rpx;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45rpx;
+}
+
+.logo image {
+  display: block;
+  width: 143rpx;
+  height: 146rpx;
+}
+
+.logo text {
+  display: block;
+  color: #333;
+  font-size: 26rpx;
+  margin-top: 16rpx;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form {
+  /* width: 100%; */
+  padding: 0 30rpx;
+}
+
+.form .form-title {
+  font-size: 46rpx;
+  color: #333;
+  margin: 106rpx 0 66rpx 0;
+  font-weight: 700;
+}
+
+.form form {
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+
+.form form .form-item {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-right: 52rpx;
+  box-sizing: border-box;
+}
+
+.login-form .form-item input {
+  width: 100%;
+  height: 92rpx;
+  font-size: 30rpx;
+}
+
+.login-form .form-item>view {
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -22rpx;
+}
+
+.login-form .form-item>view view {
+  font-size: 30rpx;
+}
+
+.login-form .retrieve {
+  text-align: right;
+  padding: 29rpx 0 64rpx 0;
+}
+
+.login-form .retrieve text {
+  display: inline-block;
+  width: 110rpx;
+  padding: 10rpx 0;
+  font-size: 22rpx;
+  margin-right: 16rpx;
+  color: #666;
+}
+
+.login-form .role {
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  margin-bottom: 40rpx;
+}
+
+.login-form .role label {
+  display: inline-block;
+  margin-right: 50rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #666;
+}
+
+.login-form .role radio {
+  margin-right: 5rpx;
+  position: relative;
+  top: -4rpx;
+  transform: scale(0.75) translateY(5rpx);
+}
+
+.goretrieve {
+  font-size: 22rpx;
+  color: #666;
+  margin-left: 220rpx;
+}

@@ -1,0 +1,13 @@
+<!-- 支付成功 -->
+<view class="success">
+  <view class="inner">
+    <countdown class="time" countTime="{{countTime}}" clear="{{clear}}" bind:clear="goToBack" />
+    <view class="suc-icon">
+      <site-icon icon="chenggong" color="#07C160" />
+    </view>
+    <view class="money">￥<text>{{amount}}</text></view>
+    <text class="des">收款成功</text>
+  </view>
+
+  <button class="confirm default" size="default" bindtap="goToIndex">完成</button>
+</view>

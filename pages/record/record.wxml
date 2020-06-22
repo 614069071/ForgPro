@@ -1,0 +1,86 @@
+<!-- 交易记录 -->
+<!-- <block wx:if="{{networkAvailable}}"> -->
+<view class="refunds">
+  <view class="name">
+    {{shopName}}
+    <view class="filter-icon" bindtap="goToToggleFilters">筛选
+      <site-icon icon="shaixuan" color="#666" />
+    </view>
+  </view>
+  <!-- 收益汇总 -->
+  <view class="statistic">
+    <view>
+      <site-icon icon="shouruzhengming" color="#05B357" /> 收入：{{statistics.successSumAmt||0}}元
+      <text>{{statistics.successNum||0}}笔</text>
+    </view>
+    <view>
+      <site-icon icon="refund" color="#05B357" /> 退款：{{statistics.refundSumAmt||0}}元
+      <text>{{statistics.refundNum||0}}笔</text>
+    </view>
+  </view>
+  <!-- 交易列表 -->
+  <view wx:for="{{refundList}}" wx:key="index" class="item" data-refund="{{item}}" bindtap="goToRefundDetial">
+    <view class="left">
+      <view class="tit">
+        <site-icon icon="{{item.channel}}" />{{refundType[item.channel]}}
+      </view>
+      <text>{{item.finishTime}}</text>
+    </view>
+    <!-- orderState为00 -->
+    <view wx:if="{{item.orderState === '00'}}" class="right {{orderStateType[item.orderState][item.refundState].cls}}">
+      {{orderStateType[item.orderState][item.refundState || '0'].syl}}{{item[orderStateType[item.orderState][item.refundState || '0'].re]}}
+      <text>{{orderStateType[item.orderState][item.refundState || '0'].label}}</text>
+    </view>
+    <!-- orderState为08 09 9 -->
+    <view wx:else class="right {{orderStateType[item.orderState].cls}}">
+      {{orderStateType[item.orderState].syl}}{{item[orderStateType[item.orderState].re]}}
+      <text>{{orderStateType[item.orderState].label}}</text>
+    </view>
+    <!-- <site-icon icon="right" color="#999" /> -->
+  </view>
+
+  <!-- 无更多数据 -->
+  <view wx:if="{{refundList.length && noMore}}" class="nomore">
+    <text></text> 没有更多数据
+    <text></text>
+  </view>
+  <!-- 空白页 -->
+  <nodata display="{{!refundList.length && noMore}}" />
+  <loading display="{{!noMore}}" />
+</view>
+
+<!-- 筛选条件 -->
+<view class="model {{isFilters ? 'show':''}}">
+  <view class="close-block" bindtap="closeFiltersModel"></view>
+  <view class="filter">
+    <view class="tit"> 支付方式</view>
+    <view class="factor">
+      <text bindtap="checkFilterType" class="{{filterType==item.value ? 'active':''}}" wx:for="{{payType}}"
+        wx:key="index" data-val="{{item.value}}" data-type="Type">{{item.name}}</text>
+    </view>
+    <view class="tit"> 支付状态</view>
+    <view class="factor">
+      <text bindtap="checkFilterType" class="{{filterState == item.value ? 'active':''}}" wx:for="{{payState}}"
+        wx:key="index" data-val="{{item.value}}" data-type="State">{{item.name}}</text>
+    </view>
+    <view class="tit"> 交易时间</view>
+    <view class="factor form-input">
+      <picker mode="date" value="{{fiterStartDate}}" data-type="Start" end="{{rangeEndDate}}"
+        bindchange="checkFilterDate">
+        <view class="dateInp">{{filterStartDate}}</view>
+      </picker>
+      至
+      <picker mode="date" value="{{fiterEndDate}}" data-type="End" end="{{rangeEndDate}}" bindchange="checkFilterDate">
+        <view class="dateInp">{{filterEndDate}}</view>
+      </picker>
+    </view>
+    <view class="factor btns">
+      <view class="filter-submit" bindtap="submitFilter">确定</view>
+      <view class="filter-reset" bindtap="resetFilter">重置</view>
+    </view>
+  </view>
+</view>
+<!-- </block>
+<view wx:else class="no-network">
+  请连接网络。。。
+</view> -->

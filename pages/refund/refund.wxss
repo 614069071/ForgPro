@@ -1,0 +1,54 @@
+page {
+  background-color: #eee;
+}
+
+.inner {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 70rpx 0 76rpx 0;
+  position: relative;
+  text-align: center;
+}
+
+/* .inner siteicon view{
+  font-size: 90rpx!important;
+} */
+
+.time {
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.suc-icon {
+  width: 93rpx;
+  height: 93rpx;
+  display: inline-block;
+}
+
+.suc-icon view {
+  font-size: 110rpx;
+}
+
+.money {
+  font-size: 36rpx;
+  color: #333;
+  margin-top: 50rpx;
+}
+
+.money text {
+  font-size: 48rpx;
+}
+
+.des {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 22rpx;
+}
+
+.success .confirm {
+  height: 77rpx;
+  line-height: 77rpx;
+  width: 680rpx;
+  margin: 80rpx auto 0;
+}

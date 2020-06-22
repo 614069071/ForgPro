@@ -1,0 +1,6 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "site-icon": "/components/siteicon/siteicon"
+  }
+}

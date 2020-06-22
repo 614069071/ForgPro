@@ -1,0 +1,46 @@
+<!-- 后屏收银输入 -->
+<view>
+  <view class="innner-nav">收银台</view>
+  <view class="inner-main">
+    <view class="title">
+      <view class="merchant">
+        <text class="merchant-name">{{shopName}}</text>
+        <text class="tit-username">{{username}}</text>
+      </view>
+      <navigator class="setting" url="/pages/setting/setting?role={{role}}" hover-class="none">设置</navigator>
+    </view>
+    <view class="amount-tit">支付金额</view>
+    <view class="amount-input">￥{{amount}}</view>
+  </view>
+
+  <view class="keyboard">
+    <view class="number" bindtap="inputAmount">
+      <view data-key="1">1</view>
+      <view data-key="2">2</view>
+      <view data-key="3">3</view>
+      <view data-key="4">4</view>
+      <view data-key="5">5</view>
+      <view data-key="6">6</view>
+      <view data-key="7">7</view>
+      <view data-key="8">8</view>
+      <view data-key="9">9</view>
+      <view data-key="0" class="zero">0</view>
+      <view data-key=".">.</view>
+    </view>
+
+    <view class="operation">
+      <view data-key="delete" class="delete" bindtap="deleteAmount">
+        <site-icon data-key="delete" icon="backspace"></site-icon>
+      </view>
+      <view data-key="pay" class="payment" bindtap="goToPayment">付款</view>
+    </view>
+  </view>
+
+  <view class="await-wrap" hidden="{{!isLoading}}">
+    <countdown wx:if="{{!isCountdownHide}}" class="await-count-time" countTime="{{countTime}}" clear="{{clear}}"
+      bind:clear="hideLoading" />
+    <icon class="await-icon" type="waiting" color="#05B357" size="60"></icon>
+    <view class="await-tips">{{resultTxt}}</view>
+    <view class="await-cancle" catchtap="goToCancle">取消</view>
+  </view>
+</view>

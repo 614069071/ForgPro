@@ -1,0 +1,4 @@
+<!-- loading 状态图 -->
+<view class="loading-wrap" style="display:{{display ? 'block':'none'}}">
+  <image class="loading-img" mode="aspectFit" src="/images/loading.gif"></image>
+</view>

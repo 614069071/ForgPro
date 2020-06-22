@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "site-icon": "/components/siteicon/siteicon",
+    "loading": "/components/loading/loading",
+    "nodata": "/components/nodata/nodata"
+  },
+  "navigationBarTitleText": "交易记录",
+  "enablePullDownRefresh": true
+}

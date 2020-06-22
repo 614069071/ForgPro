@@ -1,0 +1,2 @@
+<!-- 倒计时组件 countdown -->
+<text class="count-down-cps">{{countTime}}s</text>

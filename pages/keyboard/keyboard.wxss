@@ -1,0 +1,163 @@
+page {
+  background-color: #eee;
+}
+
+.innner-nav {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  background-color: #05b357;
+  color: #fff;
+  padding-top: 30rpx;
+  font-size: 28rpx;
+}
+
+.inner-main {
+  width: 700rpx;
+  background-color: #fff;
+  margin: 34rpx auto 0 auto;
+  padding: 0 30rpx 73rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  /* margin-top: 60rpx; */
+}
+
+.title view, .title .setting {
+  max-width: 560rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #333;
+  overflow: hidden;
+}
+
+.title .merchant{
+  display: flex;
+}
+
+.title .merchant .merchant-name{
+  flex: 1;
+  overflow: hidden;
+}
+
+.title .setting {
+  color: #90bae8;
+}
+
+.amount-tit {
+  font-size: 28rpx;
+  margin: 76rpx 0 30rpx;
+}
+
+.amount-input {
+  font-size: 48rpx;
+  padding: 32rpx 0;
+  border-bottom: 1rpx solid #999;
+}
+
+/* 键盘 */
+
+.keyboard {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  font-size: 34rpx;
+  background-color: #fff;
+}
+
+.keyboard .number {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1rpx solid rgb(245, 245, 245);
+}
+
+.keyboard .number view {
+  width: 33.3333%;
+  text-align: center;
+  height: 120rpx;
+  line-height: 120rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid rgb(245, 245, 245);
+  border-right: 1rpx solid rgb(245, 245, 245);
+}
+
+.keyboard .number view:active {
+  background-color: rgb(217, 236, 255);
+}
+
+.keyboard .number view.zero {
+  width: 66.6666%;
+}
+
+.keyboard .operation {
+  width: 25%;
+  border-top: 1rpx solid rgb(250, 250, 250);
+}
+
+.keyboard .operation view {
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+}
+
+.keyboard .operation .payment {
+  height: 360rpx;
+  line-height: 360rpx;
+  color: #fff;
+  background-color: #05b357;
+}
+
+.keyboard .operation .payment:active {
+  background-color: rgba(5, 179, 87, 0.8);
+}
+
+.keyboard .operation .delete view {
+  font-size: 60rpx;
+}
+
+.keyboard .operation .delete:active {
+  background-color: rgb(217, 236, 255);
+}
+
+.await-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  text-align: center;
+}
+
+.await-count-time {
+  position: absolute;
+  left: 50rpx;
+  top: 50rpx;
+}
+
+.await-icon {
+  margin-top: 250rpx;
+}
+
+.await-tips {
+  margin-top: 120rpx;
+}
+
+.await-cancle {
+  display: inline-block;
+  margin-top: 470rpx;
+  padding: 10rpx 40rpx;
+  border: 1px solid #07c160;
+  color: #07c160;
+  border-radius: 7rpx;
+  font-size: 26rpx;
+}

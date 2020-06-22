@@ -1,0 +1,51 @@
+page {
+  padding-bottom: 110rpx;
+}
+
+.shops .item {
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.shops .item label {
+  display: block;
+  width: 100%;
+  line-height: 46rpx;
+  font-size: 28rpx;
+  padding: 10rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.shops .item label text {
+  display: block;
+  padding-left: 64rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.shops .item radio {
+  transform: scale(0.65) translateY(10rpx);
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  top: -7rpx;
+}
+
+.shops .submit-wrap {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 999;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.shops .submit-wrap .btn {
+  width: 80%;
+  height: 70rpx;
+  line-height: 70rpx;
+}

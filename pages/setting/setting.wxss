@@ -1,0 +1,44 @@
+.setting {
+  padding-top: 30rpx;
+  width: 100%;
+}
+
+.setting .item {
+  margin: 0 15px;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #efefef;
+  position: relative;
+  padding-left: 60rpx;
+}
+
+.setting .item .img {
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+}
+
+.setting .item .img view {
+  font-size: 36rpx;
+}
+
+.setting .item .img.logo {
+  left: 0;
+}
+
+.setting .item .img.more {
+  width: 30rpx;
+  right: 0;
+}
+
+.setting .exit-btn {
+  width: 400rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: #05B357;
+  color: #fff;
+  border-radius: 6rpx;
+  margin: 60rpx auto 0 auto;
+}

@@ -1,0 +1,4 @@
+<!-- 页面空白状态 -->
+<view class="nodate" style="display:{{display ? 'block':'none'}}">
+  <site-icon icon="wushuju"></site-icon>{{tips}}
+</view>

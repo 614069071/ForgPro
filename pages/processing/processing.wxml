@@ -1,0 +1,14 @@
+<!-- 处理中状态 -->
+<view class="success">
+  <view class="inner">
+    <countdown class="time" countTime="{{countTime}}" clear="{{clear}}" bind:clear="goToBack" />
+
+    <view class="suc-icon">
+      <icon type="waiting" size="50" color="#07C160" />
+    </view>
+    <view class="money"><text></text></view>
+    <text class="des">订单正在处理中,请稍后从交易记录中查看...</text>
+  </view>
+
+  <button class="confirm default" size="default" bindtap="goToIndex">完成</button>
+</view>

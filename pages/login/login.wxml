@@ -1,0 +1,34 @@
+<!-- 登录 -->
+<view class="account-login-page concatiner">
+  <view class="logo">
+    <image mode="scaleToFill" src="/images/logo.png" />
+    <text>七分钱支付</text>
+  </view>
+  <view class="form">
+    <view class="form-title"></view>
+    <form class="login-form" bindsubmit="goToSubmit">
+      <view class="form-item">
+        <input type="number" name="userName" maxlength="11" bindinput="usernameInp" placeholder="请输入手机号码"
+          value="{{userName}}" />
+        <view bindtap="deleteUsername">
+          <site-icon class="dele-icon" icon="shanchu1" color="#d8d8d8"></site-icon>
+        </view>
+      </view>
+      <view class="form-item">
+        <input name="password" adjust-position="{{false}}" bindfocus="foucus" password="1" bindinput="passwordInp"
+          placeholder="请输入密码" value="{{password}}" />
+        <view bindtap="deletePassword">
+          <site-icon class="dele-icon" icon="shanchu1" color="#d8d8d8"></site-icon>
+        </view>
+      </view>
+      <view class="role">
+        <radio-group class="radio-group" name="role">
+          <label class="radio" wx:for="{{items}}" wx:key="index">
+            <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+          </label>
+        </radio-group>
+      </view>
+      <button formType="submit" class="submit" type="primary" disabled="{{loginbtn}}">登录</button>
+    </form>
+  </view>
+</view>

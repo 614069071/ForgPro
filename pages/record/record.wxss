@@ -1,0 +1,261 @@
+.refunds {
+  line-height: 1.5em;
+}
+
+.refunds .statistic {
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  color: #666;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 5rpx solid #eee;
+}
+
+.refunds .statistic>view {
+  line-height: 60rpx;
+}
+
+.refunds .statistic>view site-icon {
+  position: relative;
+  bottom: -2rpx;
+}
+
+.refunds .statistic text {
+  display: inline-block;
+  line-height: 60rpx;
+  margin-left: 30rpx;
+}
+
+.refunds .name {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  color: #000;
+  font-weight: bold;
+  padding: 10rpx 20rpx;
+  padding-right: 140rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.refunds .name .filter-icon {
+  position: absolute;
+  right: 20rpx;
+  top: 10rpx;
+  z-index: 99;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: normal;
+}
+
+.refunds .item {
+  width: 719rpx;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid #efefef;
+  padding: 15rpx 0;
+  align-items: center;
+}
+
+.refunds .item .left {
+  width: 600rpx;
+  font-size: 28rpx;
+  color: #363636;
+}
+
+.refunds .item .left .tit {
+  display: flex;
+  align-items: center;
+}
+
+.refunds .item .left .tit view {
+  position: relative;
+  top: 4rpx;
+}
+
+.refunds .item .left text {
+  display: block;
+  color: #999;
+  font-size: 24rpx;
+}
+
+
+.refunds .iconwx {
+  font-size: 30rpx;
+  color: #88d068;
+  margin-right: 6rpx;
+}
+
+.refunds .iconalipay {
+  font-size: 38rpx;
+  color: #108ee9;
+  margin-right: 4rpx;
+}
+
+.refunds .iconsf {
+  font-size: 30rpx;
+  color: #bb3500;
+  margin-right: 8rpx;
+}
+
+.refunds .item .right {
+  width: 300rpx;
+  /* padding-right: 20rpx; */
+  text-align: right;
+}
+
+.refunds .item .right text {
+  display: block;
+  font-size: 24rpx;
+}
+
+.refunds .item .right.trade text {
+  color: #44b549;
+}
+
+.refunds .item .right.refund text {
+  color: #f00;
+}
+
+.refunds .item .right.noRefund text {
+  color: #ccc;
+}
+
+.model {
+  display: none;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.model.show {
+  display: block;
+}
+
+.close-block {
+  width: 100%;
+  height: 40vh;
+}
+
+.filter {
+  width: 100%;
+  /* height: 60vh; */
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.filter .tit {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding-left: 30rpx;
+}
+
+.filter .factor {
+  display: flex;
+  padding: 0 20rpx;
+}
+
+.filter .factor text {
+  flex: 1;
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #999;
+  border: 1px solid #999;
+}
+
+.filter .factor text.active {
+  color: #05B357;
+  background: rgba(5,179,87,.1);
+  border: 1px solid #05B357;
+}
+
+.filter .form-input {
+  height: 75rpx;
+  line-height: 75rpx;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter .factor .dateInp {
+  border: 1px solid #efefef;
+  font-size: 28rpx;
+  width: 300rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  margin: 0 14rpx;
+  text-align: center;
+}
+
+.filter .btns {
+  display: block;
+  padding: 0 30rpx;
+  margin-top: 75rpx;
+}
+
+.filter .btns view {
+  display: block;
+  width: 100%;
+  font-size: 30rpx;
+  border: none;
+  height: 77rpx;
+  line-height: 77rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.filter .btns view.filter-submit {
+  background-color: #05B357;
+}
+
+.filter .btns view.filter-reset {
+  margin: 30rpx 0 10rpx 0;
+  color: #999;
+  background-color: #fff;
+}
+
+.nomore {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.nomore text {
+  display: inline-block;
+  width: 130rpx;
+  height: 0;
+  border-top: 1px solid #eee;
+  position: relative;
+  top: -6rpx;
+}
+
+.no-network {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+}
+
+.loading {
+  text-align: center;
+}
+
+site-icon view {
+  font-size: 36rpx !important;
+  margin-right: 6rpx;
+}

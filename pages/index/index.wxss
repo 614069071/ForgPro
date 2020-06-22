@@ -1,0 +1,282 @@
+page {
+  height: 100vh;
+}
+
+.index {
+  width: 100%;
+  height: 100vh;
+}
+
+.index .demo-swiper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.swiper-item {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.index image {
+  width: 100%;
+  height: 100%;
+}
+
+.index video {
+  width: 100%;
+  height: 100%;
+}
+
+.slogan {
+  width: 100vw;
+  height: 80vh;
+  box-sizing: border-box;
+  font-size: 50rpx;
+  line-height: 1.6em;
+  padding: 120rpx 30rpx;
+  text-align: center;
+  color: #fff;
+  background: #108ee9;
+}
+
+.slogan text {
+  display: block;
+  font-size: 28rpx;
+}
+
+.tips {
+  width: 100vw;
+  height: 20vh;
+  line-height: 20vh;
+  text-align: center;
+  background: #fff;
+}
+
+.tips text {
+  margin-left: 15rpx;
+}
+
+/* 支付样式 */
+
+.payment-wrap {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.inner {
+  background-color: #05b357;
+  padding-bottom: 250rpx;
+  position: relative;
+}
+
+.inner-seconds {
+  position: absolute;
+  top: 50rpx;
+  left: 30rpx;
+}
+
+.inner::after {
+  width: 120%;
+  height: 60rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20rpx;
+  z-index: -1;
+  content: '';
+  border-radius: 0 0 50% 50%;
+  background-color: #05b357;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner .logo {
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 150rpx;
+}
+
+.title .tit {
+  font-size: 60rpx;
+  color: #fff;
+}
+
+.title .des {
+  display: flex;
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 10rpx;
+  justify-content: space-between;
+  margin-top: 8rpx;
+}
+
+.inner .amount {
+  width: 100%;
+  color: #000;
+  padding: 0 40rpx;
+  font-size: 36rpx;
+  box-sizing: border-box;
+  margin-top: 50rpx;
+}
+
+.amount view {
+  background-color: #fff;
+  padding: 30rpx 20rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount view text {
+  color: #333;
+}
+
+.face-pay-btn {
+  padding: 0 40rpx;
+  margin-top: 60rpx;
+}
+
+.face-pay-btn button {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+/* 医保卡提示 */
+.social-security-tips {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.social-security-tips-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -56%);
+  width: 520rpx;
+}
+
+/* 医保卡明细 */
+.social-security-detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 0 15rpx 90rpx 15rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-security-detail-item.social-security-detail-item-tit text {
+  height: 70rpx;
+  line-height: 70rpx;
+  background-color: rgba(0, 178, 106, 0.1);
+  font-size: 30rpx;
+}
+
+.social-security-detail-tit {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  padding-top: 30rpx;
+}
+
+.social-security-detail-item {
+  display: flex;
+}
+
+.social-security-detail-item text {
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+
+.social-security-detail-item text:nth-child(1) {
+  flex: 2;
+}
+
+.social-security-detail-item text:nth-child(2) {
+  flex: 5;
+}
+
+.social-security-detail-item text:nth-child(3) {
+  flex: 5;
+}
+
+.social-security-detail-list {
+  flex: 1;
+  overflow: auto;
+}
+
+/* .social-security-detail-list .social-security-detail-item:last-child {
+  background-color: red;
+} */
+
+.social-security-detail-pay {
+  padding-top: 30rpx;
+  height: 80rpx;
+  text-align: right;
+}
+
+.social-security-detail-pay text {
+  display: inline-block;
+  font-size: 44rpx;
+  color: #00b26a;
+}
+
+.submit-wrap {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 999;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.social-security-detail-submit {
+  width: 90%;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.hide-btn {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  background-color: transparent;
+  z-index: 100;
+}

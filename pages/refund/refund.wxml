@@ -1,0 +1,15 @@
+<!-- 退款成功 -->
+<view class="success">
+  <view class="inner">
+    <countdown class="time" countTime="{{countTime}}" clear="{{clear}}" bind:clear="goToBack" />
+    <view class="suc-icon">
+      <site-icon icon="chenggong" color="#1AAD19" />
+    </view>
+    <view class="money">￥
+      <text>{{amount}}</text>
+    </view>
+    <text class="des">退款成功</text>
+  </view>
+
+  <button class="confirm default" size="default" bindtap="goToRecord">完成</button>
+</view>

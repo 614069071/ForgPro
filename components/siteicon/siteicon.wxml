@@ -1,0 +1,2 @@
+<!-- 自定义icon组件 -->
+<view class="iconfont icon{{icon}}" style='color:{{color}};'></view>

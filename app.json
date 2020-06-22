@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/record/record",
+    "pages/detail/detail",
+    "pages/setting/setting",
+    "pages/refund/refund",
+    "pages/result/result",
+    "pages/processing/processing",
+    "pages/fail/fail",
+    "pages/cashier/cashier",
+    "pages/keyboard/keyboard",
+    "pages/shop/shop",
+    "pages/cancel/cancel"
+  ],
+  "window": {
+    "navigationBarTitleText": "七分钱支付",
+    "navigationBarBackgroundColor": "#05B357"
+  },
+  "sitemapLocation": "sitemap.json"
+}

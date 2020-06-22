@@ -1,0 +1,12 @@
+<!-- 异常页面 -->
+<view class="success">
+  <view class="inner">
+    <countdown class="time" countTime="{{countTime}}" clear="{{clear}}" bind:clear="goToBack" />
+    <view class="suc-icon">
+      <icon type="cancel" size="50" />
+    </view>
+    <view class="des">{{mes}}</view>
+  </view>
+
+  <button class="confirm default" size="default" bindtap="goToIndex">返回</button>
+</view>

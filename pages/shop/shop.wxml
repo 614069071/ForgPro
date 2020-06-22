@@ -1,0 +1,15 @@
+<!-- 门店选择 -->
+<view class="nav"></view>
+<view class="shops">
+  <form bindsubmit="onSubmit">
+    <radio-group class="item" name="shop">
+      <label wx:for="{{shops}}" wx:key="index">
+        <radio value="{{item.shopId +'@'+ item.shopName}}" checked="{{item.checked}}" /> {{item.shopName}}
+        <text>地址：{{item.addr}}</text>
+      </label>
+    </radio-group>
+    <view class="submit-wrap">
+      <button class="btn default" size="default" formType="submit">确定</button>
+    </view>
+  </form>
+</view>

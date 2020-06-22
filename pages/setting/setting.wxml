@@ -1,0 +1,16 @@
+<!-- 设置相关 -->
+<view class="setting">
+  <navigator class="item" url="/pages/record/record" hover-class="none">
+    <site-icon class="img logo" icon="refund" />交易记录
+    <site-icon class="img more" icon="right" />
+  </navigator>
+  <navigator class="item" url="/pages/shop/shop" hover-class="none" hidden="{{role !== 'ent'}}">
+    <site-icon class="img logo" icon="shangdian" /> 门店切换
+    <site-icon class="img more" icon="right" />
+  </navigator>
+  <view class="item" bindtap="goToUpdateBanner">
+    <site-icon class="img logo" icon="guanggao" />广告更新
+    <site-icon class="img more" icon="right" />
+  </view>
+  <view class="exit-btn" bindtap="goToExit">退出登录</view>
+</view>

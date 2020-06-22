@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "site-icon": "/components/siteicon/siteicon",
+    "countdown": "/components/countdown/countdown"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "收银台",
+  "navigationBarBackgroundColor": "#05b357"
+}

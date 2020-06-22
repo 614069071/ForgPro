@@ -1,0 +1,24 @@
+<!-- 刷脸支付 -->
+<view>
+  <view class="inner">
+    <image class="logo" mode="aspectFit" src="/images/wxpay.png"></image>
+    <view class="title">
+      <view class="tit">七分钱支付</view>
+      <view class="des">
+        <text>不</text>
+        <text>止</text>
+        <text>支</text>
+        <text>付</text>
+      </view>
+    </view>
+    <view class="amount">
+      <view>
+        请支付：
+        <text>￥{{amount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="face-pay-btn">
+    <button class="default" bindtap="goToFacePay">刷脸支付</button>
+  </view>
+</view>

@@ -1,0 +1,256 @@
+page {
+  background: #eee;
+  padding-top: 20rpx;
+}
+
+.detail {
+  background: #fff;
+  padding-bottom: 15rpx;
+}
+
+.amount {
+  text-align: center;
+  font-size: 48rpx;
+  color: #333;
+  padding: 60rpx 0 50rpx 0;
+  margin: 0 auto 20rpx;
+  width: 680rpx;
+  line-height: 1em;
+  border-bottom: 1px solid #eee;
+}
+
+.amount .unit {
+  font-size: 36rpx;
+}
+
+.amount .state {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+}
+
+.data {
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 30rpx;
+  color: #999;
+}
+
+.action {
+  width: 690rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin: 50rpx auto;
+  color: #fff;
+  background-color: #05B357;
+}
+
+/* 退款弹窗 */
+/*
+.payPassword input {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: rpx;
+  margin-left: -240rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+  color: rgba(0, 0, 0, 0);
+} 
+.payPassword .icon-shanchu1 {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  z-index: 101;
+  font-size: 40rpx;
+}
+
+.payPassword {
+  width: 640rpx;
+  height: 420rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  padding-bottom: 20rpx;
+}
+
+.payPassword .tit {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #333;
+}
+
+.payPassword .tips {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #666;
+  padding: 0 10rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+
+}
+
+.payPassword input {
+  width: 480rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 1px solid #ccc;
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.payPassword button {
+  width: 232rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  font-size: 30rpx;
+  margin: 45rpx auto 0 auto;
+  border-radius: 4rpx;
+}
+
+.close-icon {
+  text-align: right;
+  padding: 10rpx;
+}
+
+.submit-btn {
+  background-color: #05B357;
+  color: #fff;
+}
+
+
+/* 退款弹框 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.payPassword .icon-shanchu1 {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  z-index: 101;
+  font-size: 40rpx;
+}
+
+.payPassword {
+  width: 640rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+  padding-bottom: 30rpx;
+}
+
+.payPassword .tit {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.payPassword .tips {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #666;
+  padding: 0 10rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.payPassword button {
+  width: 232rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  font-size: 30rpx;
+  margin: 45rpx auto 0 auto;
+  border-radius: 4rpx;
+}
+
+.close-icon {
+  text-align: right;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
+  text-align: center;
+}
+
+.close-icon view {
+  font-size: 40rpx;
+}
+
+.submit-btn {
+  background-color: #05b357;
+  color: #fff;
+}
+
+.pas-input {
+  width: 100%;
+  position: relative;
+  height: 76rpx;
+}
+
+.pas-input view {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 463rpx;
+  margin-left: -240rpx;
+  height: 76rpx;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  border: 1px solid #ddd;
+  border-right: none;
+}
+
+.pas-input view text {
+  width: 76rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  color: #666;
+}
+
+.pas-input input {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 130%;
+  height: 80rpx;
+  z-index: 10;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+}
