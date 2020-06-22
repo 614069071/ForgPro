@@ -4,6 +4,10 @@ import utils, { fsm } from './utils/util.js';
 import { appId, hostAppId, miniappType } from './config';
 import rsaSign from './utils/rsaSign.js';
 
+if (appId === 'wx5dfee4b4e54b5a61' && !miniappType) {
+  console.log = () => { }
+}
+
 // pro: TXAP11939007428ND002112  新 TXAP11951002379ND002112
 // fsm.set({ terminalNo: 'TXAP11951002379ND002112' });//测试账号
 
