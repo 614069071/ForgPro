@@ -9,7 +9,6 @@
     "pages/result/result",
     "pages/processing/processing",
     "pages/fail/fail",
-    "pages/cashier/cashier",
     "pages/keyboard/keyboard",
     "pages/shop/shop",
     "pages/cancel/cancel"
