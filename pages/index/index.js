@@ -2,10 +2,6 @@ const app = getApp();
 import util, { faceSendMes } from '../../utils/util.js';
 import fetch from '../../fetch/index.js';
 let rnum = 0;
-// socket
-// let is_socket_open = false;
-// let socket_url = 'ws://123.207.136.134:9010/ajaxchattest';
-// let SocketTask = null;
 
 Page({
   data: {
@@ -23,7 +19,6 @@ Page({
     const self = this;
     const info = app.getCacheInfo();
 
-    // this.startConnectSocket();
     this.launchMpApp(info.mchPrivatekey);
     this.onKeyBoardHandle();
     util.getSavedFileList()
@@ -39,9 +34,6 @@ Page({
   onShow() {
     rnum = 0;
     console.log('index onshow  app.cacheInfo:', app.getCacheInfo());
-
-    // socket
-    // this.handSocketEvents();
   },
   goToCodePayInit() {
     wxfaceapp.listenCodePayment({
@@ -280,82 +272,5 @@ Page({
     util.manyClickExecute(() => {
       wx.redirectTo({ url: '/pages/keyboard/keyboard' });
     })
-  },
-  // // 连接 socket
-  // startConnectSocket() {
-  //   SocketTask = wx.connectSocket({
-  //     url: socket_url,
-  //     success(res) {
-  //       console.log('socket连接成功', res)
-  //     },
-  //     fail(err) {
-  //       wx.showToast({ title: '网络异常！' })
-  //       console.log(err)
-  //     }
-  //   });
-  // },
-  // // socket 事件
-  // handSocketEvents() {
-  //   // 打开
-  //   SocketTask.onOpen(res => {
-  //     is_socket_open = true;
-  //     console.log('Socket连接打开', res)
-  //     this.sendSocketMessage('socket test');
-  //   })
-  //   // 关闭
-  //   SocketTask.onClose(res => {
-  //     console.log('Socket连接关闭', res)
-  //     is_socket_open = false;
-  //   })
-  //   // 错误
-  //   SocketTask.onError(err => {
-  //     console.log('Socket错误信息', err)
-  //     is_socket_open = false
-  //   })
-  //   // 响应消息
-  //   SocketTask.onMessage(res => {
-  //     this.dealSocketMessage(res);
-  //     console.log('监听服务器返回的消息', res)
-  //   })
-  // },
-  // // 发送socket消息
-  // sendSocketMessage(data) {
-  //   if (is_socket_open) {
-  //     SocketTask.send({ data })
-  //   } else {
-  //     console.log('is_socket_open false');
-  //     this.startConnectSocket();
-  //     SocketTask.send({ data })
-  //   }
-  // },
-  // // 处理socket消息
-  // dealSocketMessage(data) {
-  //   const { type = '', mes = '' } = data;
-  //   console.log(data);
-  //   switch (type) {
-  //     case 'payment':
-  //       console.log('支付');
-  //       break;
-  //     case 'refund':
-  //       console.log('退款');
-  //       break;
-  //     case 'login':
-  //       console.log('登录');
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // },
-  // // 关闭 socket
-  // closeSocket(data = '') {
-  //   SocketTask.close({
-  //     reason: data,//关闭socket原因
-  //     success(res) {
-  //       console.log(res);
-  //     },
-  //     fail(err) {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
+  }
 })

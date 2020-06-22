@@ -6,11 +6,6 @@ let rnum = 0;
 //校验金额正则
 const reg = /(^[1-9][0-9]{0,4}([.][0-9]{0,2})?$)|(^0?(\.[0-9]{0,2})?$)/;
 
-// socket
-let is_socket_open = false;
-let socket_url = 'ws://192.168.1.192:8083';//测试地址
-let SocketTask = null;
-
 Page({
   data: {
     shopName: '',
@@ -25,9 +20,6 @@ Page({
   },
   onLoad() {
     console.log('keyboard onload', app.getCacheInfo());
-    // socket
-    // this.startConnectSocket();
-    // this.handSocketEvents();
   },
   onShow() {
     this.update();
@@ -194,91 +186,5 @@ Page({
   hideLoading() {
     console.log('hideLoading');
     this.setData({ isLoading: false, countTime: 30, isCountdownHide: true });
-  },
-  // 连接 socket
-  startConnectSocket() {
-    SocketTask = wx.connectSocket({
-      url: socket_url,
-      success(res) {
-        console.log('socket连接成功', res)
-      },
-      fail(err) {
-        wx.showToast({ title: '网络异常！' })
-        console.log(err)
-      }
-    });
-  },
-  // socket 事件
-  handSocketEvents() {
-    // 打开
-    SocketTask.onOpen(res => {
-      is_socket_open = true;
-      console.log('Socket连接打开', res)
-      const test_data = {
-        code: "connect",
-        sendSn: "yyy",//设备号
-        value: ""
-      };
-      this.sendSocketMessage(test_data);
-    })
-    // 关闭
-    SocketTask.onClose(res => {
-      console.log('Socket连接关闭', res)
-      is_socket_open = false;
-    })
-    // 错误
-    SocketTask.onError(err => {
-      console.log('Socket错误信息', err)
-      is_socket_open = false
-    })
-    // 响应消息
-    SocketTask.onMessage(res => {
-      this.dealSocketMessage(res);
-      console.log('监听服务器返回的消息', res)
-    })
-  },
-  // 发送socket消息
-  sendSocketMessage(data) {
-    const socket_data = typeof data === 'object' ? JSON.stringify(data) : data;
-    if (is_socket_open) {
-      SocketTask.send({ data: socket_data })
-    } else {
-      console.log('is_socket_open false');
-      this.startConnectSocket();
-      SocketTask.send({ data: socket_data })
-    }
-  },
-  // 处理socket消息
-  dealSocketMessage(data) {
-    const str = data.data.split('[')[0];
-    const socket_data = JSON.parse(str);
-    switch (socket_data.type) {
-      case 'payment':
-        console.log('支付');
-        this.setData({ amount: socket_data.amount });
-        this.goToPayment();
-        break;
-      case 'refund':
-        console.log('退款');
-        break;
-      case 'login':
-        console.log('登录');
-        break;
-      default:
-        console.log('default', socket_data);
-        break;
-    }
-  },
-  // 关闭 socket
-  closeSocket(data = '') {
-    SocketTask.close({
-      reason: data,//关闭socket原因
-      success(res) {
-        console.log(res);
-      },
-      fail(err) {
-        console.log(err);
-      }
-    });
   }
 })
