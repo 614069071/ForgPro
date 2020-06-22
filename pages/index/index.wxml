@@ -37,38 +37,4 @@
       <button class="default" bindtap="goToFacePay">刷脸支付</button>
     </view>
   </view>
-
-  <!-- 医保卡 -->
-  <view class="social-security-tips" hidden="{{isSocialSecurityTipsHidden}}">
-    <view class="social-security-tips-content">
-      <image mode="widthFix" src="/images/security.png"></image>
-    </view>
-  </view>
-
-  <!-- 支付清单 -->
-  <view class="social-security-detail" hidden="{{isSocialSecurityDetailHidden}}">
-    <view class="social-security-detail-tit">支付清单</view>
-    <view class="social-security-detail-item social-security-detail-item-tit">
-      <text>序号</text>
-      <text>项目名称</text>
-      <text>金额(元)</text>
-    </view>
-
-    <view class="social-security-detail-list">
-      <view class="social-security-detail-item" wx:for="{{isSocialSecurityDetailList}}" wx:key="index">
-        <text>{{index}}</text>
-        <text>{{item.name}}</text>
-        <text>{{item.amount}}</text>
-      </view>
-    </view>
-
-    <view class="social-security-detail-pay">
-      支付金额：<text>0.01</text>元
-    </view>
-
-    <view class="submit-wrap">
-      <button class="default social-security-detail-submit" bindtap="socialPayment">确认支付</button>
-    </view>
-
-  </view>
 </view>

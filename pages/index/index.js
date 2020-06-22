@@ -10,10 +10,7 @@ Page({
     // 支付相关
     paymentHide: true,
     amount: '0',
-    autoplay: true,
-    isSocialSecurityTipsHidden: true,
-    isSocialSecurityDetailHidden: true,
-    isSocialSecurityDetailList: new Array(3).fill({ name: '测试1', amount: '0.01' }),
+    autoplay: true
   },
   onLoad() {
     const self = this;
@@ -264,9 +261,6 @@ Page({
           util.faceSendMes({ type: 'result', result: 'fail' });
         }
       })
-  },
-  socialPayment() {
-    console.log('医保支付');
   },
   hideGoLogin() {
     util.manyClickExecute(() => {
