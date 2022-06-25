@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsrsasign": "^8.0.12"
+    "jsrsasign": "^10.5.25"
   }
 }
